@@ -5,6 +5,6 @@
 
 # Maven
 target/
-.log
+*.log
 
 logging.txt
