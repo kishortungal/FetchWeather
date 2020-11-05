@@ -24,3 +24,6 @@ A set of common commands
  * mvn test -Dcucumber.options="--tag @getRepos"    :to run specific tag 
  
  Junit and cucumber support additional parameters
+
+**Reports**
+When you run maven verify the HTML report is automatically generated in target folder. I have used masterthought third party report.
