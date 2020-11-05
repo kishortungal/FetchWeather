@@ -1,0 +1,67 @@
+Request method:	GET
+Request URI:	https://api.openweathermap.org/data/2.5/weather?appid=7fe67bf08c80ded756e598d6f8fedaea&q=Bengaluru&units=metric
+Proxy:			<none>
+Request params:	<none>
+Query params:	appid=7fe67bf08c80ded756e598d6f8fedaea
+				q=Bengaluru
+				units=metric
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Server: openresty
+Date: Thu, 05 Nov 2020 13:23:23 GMT
+Content-Type: application/json; charset=utf-8
+Content-Length: 467
+Connection: keep-alive
+X-Cache-Key: /data/2.5/weather?q=bengaluru&units=metric
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, POST
+
+{
+    "coord": {
+        "lon": 77.6,
+        "lat": 12.98
+    },
+    "weather": [
+        {
+            "id": 300,
+            "main": "Drizzle",
+            "description": "light intensity drizzle",
+            "icon": "09n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 24.85,
+        "feels_like": 28.72,
+        "temp_min": 24,
+        "temp_max": 26,
+        "pressure": 1014,
+        "humidity": 83
+    },
+    "visibility": 4000,
+    "wind": {
+        "speed": 1,
+        "deg": 0
+    },
+    "clouds": {
+        "all": 40
+    },
+    "dt": 1604582089,
+    "sys": {
+        "type": 1,
+        "id": 9205,
+        "country": "IN",
+        "sunrise": 1604537073,
+        "sunset": 1604578909
+    },
+    "timezone": 19800,
+    "id": 1277333,
+    "name": "Bengaluru",
+    "cod": 200
+}

@@ -1,0 +1,150 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-11-05T13:22:47.753Z",
+        "before": [
+          {
+            "result": {
+              "duration": 93513400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.beforeQuery()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Compare Weather Data between Website and API and check diffrence is withing allowed threshold",
+        "description": "",
+        "id": "compare-weather-data-between-website-and-api;compare-weather-data-between-website-and-api-and-check-diffrence-is-withing-allowed-threshold",
+        "after": [
+          {
+            "result": {
+              "duration": 1372522500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearUp(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 26549923500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User navigates to the website URL",
+            "match": {
+              "location": "HomePageSteps.user_navigates_to_the_website_URL()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4755775500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User Navigate to \"WEATHER\" Page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"WEATHER\"",
+                  "offset": 17
+                }
+              ],
+              "location": "HomePageSteps.user_Navigate_to_Page(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 948272800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User Search for \"Bengaluru\" City and pins in Weather Page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bengaluru\"",
+                  "offset": 16
+                }
+              ],
+              "location": "WeatherPageSteps.user_Search_for_City_And_Pins(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 190634000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User Notes the Temperature of pinned City from Weather Page",
+            "match": {
+              "location": "WeatherPageSteps.user_Notes_the_Temperature_of_Pinned_City()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4329826600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User requests Temperature of pinned City from Weather API",
+            "match": {
+              "location": "APISteps.getTemperatureByAPI()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 161100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "API Response code is \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"200\"",
+                  "offset": 21
+                }
+              ],
+              "location": "APISteps.validate_Reposnse_Code(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 11,
+            "name": "Temparature difference bewteen Web and API is not more than \"1\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@twitter"
+          }
+        ]
+      }
+    ],
+    "name": "Compare Weather Data between Website and API",
+    "description": "",
+    "id": "compare-weather-data-between-website-and-api",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/compareWeatherData.feature",
+    "tags": []
+  }
+]
