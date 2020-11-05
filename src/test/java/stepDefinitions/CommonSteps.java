@@ -13,7 +13,7 @@ import cucumber.TestContext;
 import enums.ContextType;
 
 import org.apache.log4j.BasicConfigurator;
-
+import org.junit.Assert;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
@@ -40,48 +40,27 @@ import io.restassured.response.ResponseBody;
 import static io.restassured.RestAssured.given;
 
 @RunWith(Cucumber.class)
-public class APISteps  {
+public class CommonSteps  {
 	
-	Response response;
 	TestContext testContext;
-	ApiManager apiManager;
 	ScenarioContext scenarioContext;
 	
-	public APISteps(TestContext context) {
+	public CommonSteps(TestContext context) {
 		testContext = context;
-		apiManager = testContext.getApiManager();
 		scenarioContext = testContext.getScenarioContext();
 	}	
 	
 	//BasicConfigurator.configure();
-	private final Logger logger = LoggerFactory.getLogger(APISteps.class);
+	private final Logger logger = LoggerFactory.getLogger(CommonSteps.class);
 	
 	
-	@Then("API Response code is {string}")
-	public void validate_Reposnse_Code(String expected_Code) {
-		
-		assertEquals(response.getStatusCode(), Integer.parseInt(expected_Code));		
-		
+	@Then("Temparature difference bewteen Web and API is not more than {string}")
+	public void temparature_difference_bewteen_Web_and_API_is_not_more_than(String threshold) {
+		double  WebTemp = Double.parseDouble(scenarioContext.getContext(ContextType.WebPageTemparature));
+		double  ApiTemp = Double.parseDouble(scenarioContext.getContext(ContextType.ApiTemparature));
+		double threshold_double = Double.parseDouble(threshold);
+		if (Math.abs(WebTemp - ApiTemp) > threshold_double) {
+			Assert.fail("Temparature difference bewteen Web and API is not more than "+threshold);
+		}		
 	}
-	
-	@When("User requests Temperature of pinned City from Weather API")
-	public void getTemperatureByAPI() throws IOException {
-		
-		RequestSpecification requestSpecification = apiManager.getBaseRequestSpecification();
-		String city = scenarioContext.getContext(ContextType.CityName);
-		requestSpecification=requestSpecification
-				.queryParam("q", city)
-				.queryParam("units", "metric");
-		
-		response =given().spec(requestSpecification).get();	
-		ResponseBody body = response.getBody();
-		
-		weatherData weatherDataObject = body.as(weatherData.class);
-		
-		String Temperature = weatherDataObject.getMain().getTemp().toString();
-		
-		scenarioContext.setContext(ContextType.ApiTemparature,Temperature  );
-		
-	}	
-
 }

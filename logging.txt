@@ -13,9 +13,9 @@ Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
 Server: openresty
-Date: Thu, 05 Nov 2020 13:23:23 GMT
+Date: Thu, 05 Nov 2020 14:37:02 GMT
 Content-Type: application/json; charset=utf-8
-Content-Length: 467
+Content-Length: 466
 Connection: keep-alive
 X-Cache-Key: /data/2.5/weather?q=bengaluru&units=metric
 Access-Control-Allow-Origin: *
@@ -29,22 +29,22 @@ Access-Control-Allow-Methods: GET, POST
     },
     "weather": [
         {
-            "id": 300,
-            "main": "Drizzle",
-            "description": "light intensity drizzle",
-            "icon": "09n"
+            "id": 201,
+            "main": "Thunderstorm",
+            "description": "thunderstorm with rain",
+            "icon": "11n"
         }
     ],
     "base": "stations",
     "main": {
-        "temp": 24.85,
-        "feels_like": 28.72,
-        "temp_min": 24,
-        "temp_max": 26,
-        "pressure": 1014,
-        "humidity": 83
+        "temp": 22,
+        "feels_like": 26,
+        "temp_min": 22,
+        "temp_max": 22,
+        "pressure": 1016,
+        "humidity": 100
     },
-    "visibility": 4000,
+    "visibility": 3000,
     "wind": {
         "speed": 1,
         "deg": 0
@@ -52,7 +52,7 @@ Access-Control-Allow-Methods: GET, POST
     "clouds": {
         "all": 40
     },
-    "dt": 1604582089,
+    "dt": 1604586368,
     "sys": {
         "type": 1,
         "id": 9205,

@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-11-05T13:22:47.753Z",
+        "start_timestamp": "2020-11-05T14:36:27.747Z",
         "before": [
           {
             "result": {
-              "duration": 93513400,
+              "duration": 103662200,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 1372522500,
+              "duration": 1513265300,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 26549923500,
+              "duration": 16708135600,
               "status": "passed"
             },
             "line": 5,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 4755775500,
+              "duration": 14426012000,
               "status": "passed"
             },
             "line": 6,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 948272800,
+              "duration": 699457700,
               "status": "passed"
             },
             "line": 7,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 190634000,
+              "duration": 148587400,
               "status": "passed"
             },
             "line": 8,
@@ -95,7 +95,7 @@
           },
           {
             "result": {
-              "duration": 4329826600,
+              "duration": 3794638200,
               "status": "passed"
             },
             "line": 9,
@@ -107,7 +107,7 @@
           },
           {
             "result": {
-              "duration": 161100,
+              "duration": 1684900,
               "status": "passed"
             },
             "line": 10,
@@ -125,11 +125,20 @@
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 310500,
+              "status": "passed"
             },
             "line": 11,
-            "name": "Temparature difference bewteen Web and API is not more than \"1\"",
-            "match": {},
+            "name": "Temparature difference bewteen Web and API is not more than \"15\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"15\"",
+                  "offset": 60
+                }
+              ],
+              "location": "CommonSteps.temparature_difference_bewteen_Web_and_API_is_not_more_than(String)"
+            },
             "keyword": "And "
           }
         ],

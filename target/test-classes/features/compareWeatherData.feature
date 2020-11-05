@@ -8,5 +8,5 @@ Feature: Compare Weather Data between Website and API
 	And User Notes the Temperature of pinned City from Weather Page
 	And User requests Temperature of pinned City from Weather API
 	Then API Response code is "200"
-	And Temparature difference bewteen Web and API is not more than "1" 
+	And Temparature difference bewteen Web and API is not more than "15" 
 	

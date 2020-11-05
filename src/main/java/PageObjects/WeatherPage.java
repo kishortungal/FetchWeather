@@ -1,18 +1,12 @@
 package PageObjects;
 
-import java.util.List;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
-
-import managers.FileReaderManager;
  
 public class WeatherPage {
  WebDriver driver;
@@ -33,14 +27,10 @@ public void pinCity(String city) throws Exception {
 		act.moveToElement(SearchBox).click().sendKeys(city).build().perform();		
 		WebElement SearchBoxCity = driver.findElement(By.cssSelector("input#"+city));
 		
-		if (SearchBoxCity.isDisplayed()) {
-			System.out.println("City is present");
-			
-			if (SearchBoxCity.isSelected()) {
-				System.out.println("City is selected");
-			}
-			else 
+		if (SearchBoxCity.isDisplayed()) {			
+			if (!SearchBoxCity.isSelected()) {
 				SearchBoxCity.click();
+			}				
 		}		
 	}
 	else {
