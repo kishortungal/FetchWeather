@@ -20,8 +20,9 @@ This module is responsible for managing test cases, test data, test environmnets
 After clone repository use any of the below command running tests
 A set of common commands
  * mvn verify   :run any checks on results of integration tests to ensure quality criteria are met
+ * mvn verify -Dcucumber.options="--tags '@tempDiff'"	:to run specific tag 
  * mvn clean test   :to run all scenarios
- * mvn test -Dcucumber.options="--tag @getRepos"    :to run specific tag 
+ * mvn test -Dcucumber.options="--tags '@tempDiff'"    :to run specific tag 
  
  Junit and cucumber support additional parameters
 

@@ -1,6 +1,6 @@
 Feature: Compare Weather Data between Website and API
 
-@twitter
+@tempDiff
 	Scenario: Compare Weather Data between Website and API and check diffrence is withing allowed threshold
 	Given User navigates to the website URL
 	When User Navigate to "WEATHER" Page

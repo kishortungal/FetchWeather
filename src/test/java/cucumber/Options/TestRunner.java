@@ -14,7 +14,6 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(features="src/test/java/features",
 					glue= "stepDefinitions",
-					tags = {"@twitter"},
 					plugin = { "pretty", "json:target/cucumber-reports/rerun/Cucumber.json", "rerun:target/cucumber-reports/rerun.txt"}
 					) 
 public class TestRunner {
