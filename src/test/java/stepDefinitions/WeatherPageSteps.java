@@ -60,6 +60,7 @@ public class WeatherPageSteps  {
 
 @When("User Search for {string} City and pins in Weather Page")
 public void user_Search_for_City_And_Pins(String City) throws Exception {
+	commonFunctions.waitForPageLoaded();
 	weatherPage.pinCity(City);
 	scenarioContext.setContext(ContextType.CityName, City);
 }

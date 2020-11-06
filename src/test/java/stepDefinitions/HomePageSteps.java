@@ -55,6 +55,7 @@ public class HomePageSteps  {
 public void user_navigates_to_the_website_URL() {
 	
 	homePage.navigateTo_HomePage(); 
+	commonFunctions.waitForPageLoaded();
 }
 
 @When("User Navigate to {string} Page")

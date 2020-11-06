@@ -38,7 +38,7 @@ public class CommonFunctions {
              };
      try {
          Thread.sleep(1000);
-         WebDriverWait wait = new WebDriverWait(driver, 30);
+         WebDriverWait wait = new WebDriverWait(driver, 60);
          wait.until(expectation);
      } catch (Throwable error) {
          Assert.fail("Timeout waiting for Page Load Request to complete.");
